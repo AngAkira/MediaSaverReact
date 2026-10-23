@@ -1,0 +1,27 @@
+/*header*/
+*{
+    font-family: "Book Antiqua";
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+/*content*/
+.content{
+    flex:1;
+    margin: 3vh;
+}
+.layout{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-content{
+    display:flex;
+    flex-direction: row;
+    padding: 20px;
+}
