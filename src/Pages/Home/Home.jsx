@@ -1,29 +1,71 @@
-import './Home.css'
-import Header from "../../components/Header/Header.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
-import Buscador from "../../components/Buscador/Buscador.jsx";
-import Post from "../../components/Posts/Post.jsx";
+import { useState } from "react";
 
+import Header from "../../components/Header/Header";
+import Buscador from "../../components/Buscador/Buscador";
+import Post from "../../components/Posts/Post";
+import Footer from "../../components/Footer/Footer";
 
-function Content(){
-    return (<>
-        <main className={"main-content"}>
-            <Post/>
+import { posts } from "../../data/data";
 
-        </main>
-    </>)
-}
+import "./Home.css";
 
+function Home() {
 
-export default function Home(){
-    return <>
-        <div className={"layout"}>
-            <Header/>
-            <div className={"content"}>
-                <Buscador/>
-                <Content/>
-            </div>
-            <Footer/>
+    const [busca, setBusca] = useState("");
+
+    const postsFiltrados = posts.filter((post) => {
+
+        const termo = busca.toLowerCase();
+
+        return (
+            post.nome.toLowerCase().includes(termo) ||
+            post.marca.toLowerCase().includes(termo) ||
+            post.categoria.toLowerCase().includes(termo)
+        );
+
+    });
+
+    return (
+        <div className="home">
+
+            <Header />
+
+            <main className="home-conteudo">
+
+                <Buscador
+                    valor={busca}
+                    setValor={setBusca}
+                />
+
+                <section className="posts">
+
+                    {postsFiltrados.length > 0 ? (
+
+                        postsFiltrados.map((post) => (
+
+                            <Post
+                                key={post.id}
+                                post={post}
+                            />
+
+                        ))
+
+                    ) : (
+
+                        <p className="sem-resultados">
+                            Nenhum item encontrado.
+                        </p>
+
+                    )}
+
+                </section>
+
+            </main>
+
+            <Footer />
+
         </div>
-    </>
+    );
 }
+
+export default Home;

@@ -1,9 +1,29 @@
-.header{
-    background-color: #C08552;
-    padding: 2vh;
+.header {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #c58b5d;
 }
 
-.header h1{
-    text-align: center;
-    color: #e5e4e7;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icone {
+    font-size: 43px;
+}
+
+.logo h1 {
+    margin: 0;
+
+    color: #fff8ed;
+
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
 }
