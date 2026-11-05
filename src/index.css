@@ -17,12 +17,16 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-
+html,
+body,
+#root {
+  width: 100%;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100%;
+  margin: 0;
+}
 
+body {
   background-color: #1f1f1f;
 }
 
@@ -39,15 +43,15 @@ button {
   min-height: 100vh;
 }
 
+/* Página ocupando a tela inteira */
 .app {
-  width: min(100% - 40px, 1200px);
+  width: 100%;
+  min-height: 100vh;
 
-  margin: 14px auto 28px;
+  margin: 0;
+  padding: 0;
 }
 
-@media (max-width: 600px) {
-  .app {
-    width: min(100% - 24px, 1200px);
-    margin-top: 12px;
-  }
+.breadcrumb {
+  display: none;
 }
