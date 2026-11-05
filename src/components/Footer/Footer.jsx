@@ -3,9 +3,14 @@ import {
     HeartHandshake
 } from "lucide-react";
 
+import {
+    Link
+} from "react-router-dom";
+
 import "./Footer.css";
 
 function Footer() {
+
     return (
         <footer className="footer">
 
@@ -15,15 +20,21 @@ function Footer() {
 
             <div className="footer-botoes">
 
-                <button type="button">
+                <Link
+                    to="/cadastro"
+                    className="footer-botao"
+                >
                     <Plus size={15} />
                     Criar post
-                </button>
+                </Link>
 
-                <button type="button">
+                <Link
+                    to="/doacao"
+                    className="footer-botao"
+                >
                     <HeartHandshake size={15} />
                     Fazer doação
-                </button>
+                </Link>
 
             </div>
 

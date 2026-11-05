@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Header from "../../components/Header/Header";
 import Buscador from "../../components/Buscador/Buscador";
-import Post from "../../components/Posts/Post";
+import Posts from "../../components/Posts/Posts.jsx";
 import Footer from "../../components/Footer/Footer";
 
 import { posts } from "../../data/data";
@@ -43,7 +43,7 @@ function Home() {
 
                         postsFiltrados.map((post) => (
 
-                            <Post
+                            <Posts
                                 key={post.id}
                                 post={post}
                             />

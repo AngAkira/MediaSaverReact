@@ -6,7 +6,7 @@ import {
     MessageSquare
 } from "lucide-react";
 
-import "./Post.css";
+import "./Posts.css";
 
 const icones = {
     camera: Camera,
@@ -15,7 +15,7 @@ const icones = {
     radio: Radio
 };
 
-function Post({ post }) {
+function Posts({ post }) {
 
     const Icone = icones[post.icone] || Camera;
 
@@ -58,4 +58,4 @@ function Post({ post }) {
     );
 }
 
-export default Post;
+export default Posts;

@@ -4,13 +4,12 @@
   font-family: "DM Sans", Arial, sans-serif;
 
   color: #33271f;
-  background-color: #1f1f1f;
+  background: #1f1f1f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -27,11 +26,12 @@ body,
 }
 
 body {
-  background-color: #1f1f1f;
+  background: #1f1f1f;
 }
 
 button,
-input {
+input,
+textarea {
   font: inherit;
 }
 
@@ -39,19 +39,22 @@ button {
   cursor: pointer;
 }
 
-#root {
-  min-height: 100vh;
+a {
+  color: inherit;
 }
 
-/* Página ocupando a tela inteira */
 .app {
   width: 100%;
   min-height: 100vh;
-
   margin: 0;
-  padding: 0;
 }
 
-.breadcrumb {
-  display: none;
+.page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f4eee2;
 }

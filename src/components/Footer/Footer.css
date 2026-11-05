@@ -72,3 +72,34 @@
         flex: 1;
     }
 }
+
+.footer-botao {
+    min-width: 116px;
+    min-height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 8px 15px;
+
+    border-radius: 6px;
+
+    color: #62442e;
+    background: #f5eee2;
+
+    box-shadow:
+            0 2px 3px rgba(0, 0, 0, 0.25);
+
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.footer-botao:hover {
+    background: #fffaf2;
+}
